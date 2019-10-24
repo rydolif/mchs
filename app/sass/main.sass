@@ -1,0 +1,148 @@
+@import "libs"
+@import "base"
+
+
+.header
+	padding: 2em 0
+	background-image: url(../img/top.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+	p
+		text-transform: uppercase
+		text-align: center
+		
+	b
+		font-size: 1.5em
+		color: $accent
+
+	&__container
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__logo
+		margin-right: 2.8em
+		width: 5em
+		height: 5em
+			
+
+.hero
+	padding: 6.5em 0
+	background-image: url(../img/hero.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	
+	p
+		font-size: 2em
+		position: relative
+		color: $accent
+		margin-bottom: .7em
+		padding-left: 2em
+
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translate(0, -50%)
+			width: 1.5em
+			height: 2px
+			box-shadow: 0 0 3px rgba($accent, 1)
+			background-color: $accent
+
+
+.content
+	padding: 7.5em 0
+
+	p
+		font-weight: 600
+		margin-bottom: 2.5em
+
+	&__list
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+
+	&__item
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		width: 31%
+		text-align: center
+		box-shadow: 0 5px 5px rgba($text, .1)
+		margin-bottom: 2.5em
+		padding: 2.5em
+
+		&:hover
+			.content__hover
+				opacity: 1
+				bottom: 90%
+
+	&__img
+		position: relative
+		margin-bottom: 2.5em
+		width: 8em
+		height: 8em
+		border-radius: 50%
+		margin: 0 auto
+		margin-bottom: 3.6em
+		background-color: #f7f7f7
+
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+
+	&__hover
+		position: absolute !important
+		bottom: 60%
+		right: 1em
+		left: 1em
+		background: $accent
+		color: #fff
+		font-size: .8em
+		padding: 1em
+		box-shadow: 0 0 10px rgba($text, .2)
+		opacity: 0
+		transition: all .6s
+		z-index: 1
+
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			transform: translate(-50%, 0)
+			top: 95%
+			border-bottom: 10px solid transparent
+			border-left: 10px solid transparent
+			border-right: 10px solid transparent
+			border-top: 10px solid $accent
+
+
+
+.footer
+	padding: 4em 0
+	background-image: url(../img/footer.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+	p
+		color: $accent
+		text-align: center
+
+	&__container
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+
+
+
+@import "media" // Always at the end

@@ -1,0 +1,57 @@
+.btn
+	position: relative
+	display: inline-block
+	height: 50px
+	padding: 0 30px
+	border: none
+	outline: none
+	background: $accent
+	text-align: center
+	border: 1px solid $accent
+	transition: all .6s
+	letter-spacing: .2px
+	font-weight: 500
+	color: #fff
+	line-height: 50px
+	min-width: 200px
+
+	&:hover,
+	&:focus
+		outline: none
+		text-decoration: none
+		cursor: pointer
+		box-shadow: 0 0 15px rgba($accent, 1)
+		color: #fff
+
+		.btn__hover
+			opacity: 1
+			top: 103%
+	
+	&__hover
+		position: absolute !important
+		top: 60%
+		right: 1em
+		left: 1em
+		background: #fff
+		font-size: .8em !important
+		line-height: 1
+		padding: 1em !important
+		box-shadow: 0 0 10px rgba($text, .2)
+		opacity: 0
+		transition: all .6s
+		z-index: 1
+		
+		&::before
+			display: none !important
+
+
+		&::after
+			content: ''
+			position: absolute
+			left: 50%
+			transform: translate(-50%, 0)
+			bottom: 95%
+			border-bottom: 7px solid #fff
+			border-left: 7px solid transparent
+			border-right: 7px solid transparent
+			border-top: 7px solid transparent
